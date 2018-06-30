@@ -27,6 +27,7 @@ func main() {
 		log.Fatal("Unable to confirm")
 	} else if strings.ToUpper(confirm) != "Y" {
 		fmt.Println("Aborting")
+		os.Exit(1)
 	}
 
 	jira.UpdateIssues(tickets, build)
